@@ -1,0 +1,37 @@
+/* ============================================
+   Global School – CSS Design Tokens
+   ============================================ */
+
+:root {
+  /* Brand Colors */
+  --primary:        #1a56db;
+  --primary-dark:   #1240a8;
+  --primary-light:  #e8efff;
+  --accent:         #f59e0b;
+  --accent-dark:    #d97706;
+
+  /* Neutrals */
+  --dark:           #0f172a;
+  --dark-2:         #1e293b;
+  --secondary:      #64748b;
+  --text:           #374151;
+  --light:          #f1f5f9;
+  --white:          #ffffff;
+  --border:         #e2e8f0;
+
+  /* Shadows */
+  --shadow:         0 4px 24px rgba(26, 86, 219, 0.10);
+  --shadow-lg:      0 8px 40px rgba(26, 86, 219, 0.18);
+
+  /* Radii */
+  --radius:         12px;
+  --radius-lg:      20px;
+
+  /* Transition */
+  --transition:     0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Typography */
+  --font-body:      'Inter', sans-serif;
+  --font-heading:   'Outfit', sans-serif;
+  --font-serif:     'Playfair Display', serif;
+}
