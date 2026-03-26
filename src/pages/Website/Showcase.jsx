@@ -1,4 +1,4 @@
-import PageHeader from '../components/layout/PageHeader';
+import PageHeader from '../../components/layout/PageHeader';
 
 const achievements = [
   { icon: 'fa-trophy', title: 'State Science Olympiad 2026', desc: 'Gold in Physics, Silver in Chemistry. 3 students in Top 10 nationally.', tag: 'Science' },

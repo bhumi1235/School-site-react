@@ -1,4 +1,4 @@
-import PageHeader from '../components/layout/PageHeader';
+import PageHeader from '../../components/layout/PageHeader';
 
 const galleryImages = [
   { src: '/img/school_science_lab_high_tech.webp', caption: 'Science Laboratory' },

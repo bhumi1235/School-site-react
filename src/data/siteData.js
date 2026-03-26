@@ -144,7 +144,6 @@ export const navLinks = [
     ],
   },
   { label: 'Showcase', to: '/showcase' },
-  { label: 'Carousel', to: '/#testimonials' },
   { label: 'News & Events', to: '/news' },
   {
     label: 'Rules', to: '/rules',

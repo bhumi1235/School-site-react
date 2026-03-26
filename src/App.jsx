@@ -8,29 +8,52 @@ import CTABanner from './components/layout/CTABanner';
 import BackToTop from './components/ui/BackToTop';
 
 
-import Home           from './pages/Home';
-import About          from './pages/About';
-import Infrastructure from './pages/Infrastructure';
-import Beyond         from './pages/Beyond';
-import Academics      from './pages/Academics';
-import Showcase       from './pages/Showcase';
-import NewsEvents      from './pages/NewsEvents';
-import Rules          from './pages/Rules';
-import Gallery        from './pages/Gallery';
-import Contact        from './pages/Contact';
-import Admissions     from './pages/Admissions';
-import Disclosure     from './pages/Disclosure';
-import Leadership     from './pages/Leadership';
-import Team           from './pages/Team';
+import Home           from './pages/Website/Home';
+import About          from './pages/Website/About';
+import Infrastructure from './pages/Website/Infrastructure';
+import Beyond         from './pages/Website/Beyond';
+import Academics      from './pages/Website/Academics';
+import Showcase       from './pages/Website/Showcase';
+import NewsEvents      from './pages/Website/NewsEvents';
+import Rules          from './pages/Website/Rules';
+import Gallery        from './pages/Website/Gallery';
+import Contact        from './pages/Website/Contact';
+import Admissions     from './pages/Website/Admissions';
+import Disclosure     from './pages/Website/Disclosure';
+import Leadership     from './pages/Website/Leadership';
+import Team           from './pages/Website/Team';
 
-// Scroll to top on route change
+import StudentLogin         from './pages/Student/StudentLogin';
+import DashboardLayout      from './pages/Student/DashboardLayout';
+import DashboardHome        from './pages/Student/DashboardHome';
+import Attendance           from './pages/Student/Attendance';
+import Homework             from './pages/Student/Homework';
+import Fees                 from './pages/Student/Fees';
+import Settings             from './pages/Student/Settings';
+import Timetable            from './pages/Student/Timetable';
+
+// Scroll to top on route change or handle hash scrolling
 function ScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      // Small timeout to allow the DOM to render before scrolling
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
   return null;
 }
 
 function Layout() {
+  const { pathname } = useLocation();
   return (
     <>
       <Topbar />
@@ -55,7 +78,7 @@ function Layout() {
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
-      <CTABanner />
+      {pathname !== '/admissions' && <CTABanner />}
       <Footer />
       <BackToTop />
     </>
@@ -66,7 +89,22 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Layout />
+      <Routes>
+        <Route path="/student/login" element={<StudentLogin />} />
+        
+        {/* Student Dashboard Sub-router */}
+        <Route path="/student/dashboard" element={<DashboardLayout />}>
+          <Route index element={<DashboardHome />} />
+          <Route path="attendance" element={<Attendance />} />
+          <Route path="homework" element={<Homework />} />
+          <Route path="fees" element={<Fees />} />
+          <Route path="timetable" element={<Timetable />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
+
+        {/* Main website layout catch-all */}
+        <Route path="/*" element={<Layout />} />
+      </Routes>
     </BrowserRouter>
   );
 }

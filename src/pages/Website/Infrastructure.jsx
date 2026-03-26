@@ -1,5 +1,5 @@
-import PageHeader from '../components/layout/PageHeader';
-import { facilities } from '../data/siteData';
+import PageHeader from '../../components/layout/PageHeader';
+import { facilities } from '../../data/siteData';
 
 const labs = [
   { title: 'Physics Lab', desc: 'Advanced equipment for mechanical and electrical experiments, oscilloscopes, spectrometers, and more.', color: 'var(--primary)' },
@@ -15,7 +15,7 @@ export default function Infrastructure() {
       {/* School Building */}
       <section style={{ background: '#fff', padding: '5rem 0' }} id="building">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="row-2" style={{ gap: '3rem', alignItems: 'center' }}>
             <div data-aos="fade-right">
               <span className="section-label">Our Campus</span>
               <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1.25rem' }}>School Building</h2>
@@ -40,7 +40,7 @@ export default function Infrastructure() {
       {/* Modern Classrooms */}
       <section style={{ background: '#f8fafc', padding: '5rem 0' }} id="classrooms">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="row-2" style={{ gap: '3rem', alignItems: 'center' }}>
             <div data-aos="fade-right">
               <img src="/img/about-2.webp" alt="Classrooms" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 8px 32px rgba(26,86,219,0.12)' }} loading="lazy" />
             </div>
@@ -50,7 +50,7 @@ export default function Infrastructure() {
               <p style={{ color: 'var(--secondary)', marginBottom: '1.25rem' }}>
                 Temperature-controlled classrooms with ergonomic furniture provide a comfortable learning environment. Each room is designed for a low student-teacher ratio to ensure personalized attention. Natural light-filled spaces encourage focus and creativity.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+              <div className="row-2" style={{ gap: '0.75rem' }}>
                 {['42 Smart Classrooms', 'Ratio: 25:1 Student–Teacher', 'Ergonomic Seating', 'Air-Conditioned Spaces', 'Interactive Displays', 'Soundproofed Walls'].map(item => (
                   <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem' }}>
                     <i className="fas fa-check" style={{ color: 'var(--primary)', fontSize: '0.7rem' }} />{item}
@@ -116,7 +116,7 @@ export default function Infrastructure() {
       {/* Auditorium */}
       <section style={{ background: '#fff', padding: '5rem 0' }} id="auditorium">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="row-2" style={{ gap: '3rem', alignItems: 'center' }}>
             <div data-aos="fade-right">
               <img src="/img/school_auditorium_modern.webp" alt="Auditorium" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 8px 32px rgba(26,86,219,0.12)' }} loading="lazy" />
             </div>
@@ -126,7 +126,7 @@ export default function Infrastructure() {
               <p style={{ color: 'var(--secondary)', marginBottom: '1.25rem' }}>
                 With a seating capacity of 500+, our air-conditioned auditorium features professional-grade acoustic and lighting systems for grand events including Annual Day, debates, cultural nights, and science fairs.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+              <div className="row-2" style={{ gap: '0.75rem' }}>
                 {['600 Seat Capacity', 'Professional Acoustics', 'Broadcast Lighting Rig', 'Green Room & Backstage', 'Accessibility Ramps', 'Live Recording Studio'].map(item => (
                   <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem' }}>
                     <i className="fas fa-check" style={{ color: 'var(--accent)', fontSize: '0.7rem' }} />{item}

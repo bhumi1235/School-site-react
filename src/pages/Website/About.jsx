@@ -1,4 +1,4 @@
-import PageHeader from '../components/layout/PageHeader';
+import PageHeader from '../../components/layout/PageHeader';
 
 
 const coreValues = [
@@ -21,10 +21,10 @@ export default function About() {
           <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }} data-aos="fade-up">
             <span className="section-label">Our Legacy</span>
             <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1.5rem' }}>Historical Background</h2>
-            <p style={{ fontSize: '1.1rem', color: 'var(--text)', marginBottom: '1.5rem' }}>
-              From its inception in 2000, Global School has been more than just an educational institution; it has been a beacon of hope and excellence. What started as a visionary dream by our founder, Shri. R.K. Oberoi, has transformed into a prestigious multi-disciplinary campus in the heart of Abu Dhabi.
-            </p>
             <div style={{ textAlign: 'left', maxWidth: '780px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              <p style={{ fontSize: '1.1rem', color: 'var(--text)' }}>
+                From its inception in 2000, Global School has been more than just an educational institution; it has been a beacon of hope and excellence. What started as a visionary dream by our founder, Shri. R.K. Oberoi, has transformed into a prestigious multi-disciplinary campus in the heart of Abu Dhabi.
+              </p>
               <p style={{ color: 'var(--secondary)' }}>
                 Over the last quarter-century, we have been pioneers in integrating traditional values with modern pedagogical techniques. Our journey began with a handful of students and a monumental ambition: to provide a world-class education that remains accessible and grounded in character. Today, our alumni are leading industries, driving innovation, and making significant contributions across the globe.
               </p>
@@ -64,14 +64,14 @@ export default function About() {
       {/* School Aim */}
       <section style={{ background: '#fff', padding: '5rem 0' }} id="aim">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="row-2" style={{ gap: '3rem', alignItems: 'center' }}>
             <div data-aos="fade-right">
               <span className="section-label">Our Purpose</span>
               <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1.25rem' }}>School Aim</h2>
               <p style={{ color: 'var(--secondary)', marginBottom: '1.5rem' }}>
                 Our aim is to empower students with the skills, values, and knowledge required to thrive in an ever-evolving global landscape. We seek to transcend traditional learning boundaries, creating a vibrant ecosystem where curiosity meets capability.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.6rem', marginBottom: '1.5rem' }}>
+              <div className="row-2" style={{ gap: '0.6rem', marginBottom: '1.5rem' }}>
                 {['Critical Thinking & Inquiry', 'Emotional Intelligence', 'Technological Literacy', 'Social Responsibility'].map(item => (
                   <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
                     <i className="fas fa-check" style={{ color: 'var(--primary)', fontSize: '0.8rem' }} />{item}
@@ -94,7 +94,7 @@ export default function About() {
             <span className="section-label">Our Guiding Stars</span>
             <h2 className="section-title" style={{ marginTop: '0.5rem' }}>Vision & Mission</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+          <div className="row-2" style={{ gap: '2rem' }}>
             <div data-aos="fade-right"
               style={{ background: '#0f172a', color: '#fff', padding: '2.5rem', borderRadius: '16px', boxShadow: '0 8px 40px rgba(15,23,42,0.2)', borderBottom: '5px solid var(--accent)' }}>
               <i className="fas fa-eye" style={{ fontSize: '2.5rem', color: 'var(--accent)', marginBottom: '1.25rem', display: 'block' }} />

@@ -1,4 +1,4 @@
-import PageHeader from '../components/layout/PageHeader';
+import PageHeader from '../../components/layout/PageHeader';
 
 const sportsFeatures = [
   { icon: 'fa-basketball-ball', title: 'Indoor Complex', desc: 'International-standard courts for Basketball, Badminton, and Table Tennis.' },
@@ -31,14 +31,14 @@ export default function BeyondAcademics() {
       {/* Sports */}
       <section style={{ background: '#fff', padding: '5rem 0' }} id="sports">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="row-2" style={{ gap: '3rem', alignItems: 'center' }}>
             <div data-aos="fade-right">
               <span className="section-label">Athletic Excellence</span>
               <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1.25rem' }}>Sports Arena: Healthy Mind, Healthy Body</h2>
               <p style={{ color: 'var(--secondary)', marginBottom: '1.5rem' }}>
                 Physical fitness is not an elective at Global School; it is a way of life. We believe that the discipline of the sports field translates directly into academic focus and emotional resilience. Our comprehensive sports program is designed to identify and nurture athletic talent from a young age.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+              <div className="row-2" style={{ gap: '1.5rem' }}>
                 {sportsFeatures.map(f => (
                   <div key={f.title} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                     <i className={`fas ${f.icon}`} style={{ fontSize: '1.5rem', color: 'var(--primary)', flexShrink: 0, marginTop: '2px' }} />
@@ -87,7 +87,7 @@ export default function BeyondAcademics() {
       {/* Projects */}
       <section style={{ background: '#fff', padding: '5rem 0' }} id="projects">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="row-2" style={{ gap: '3rem', alignItems: 'center' }}>
             <div data-aos="fade-right">
               <img src="/img/about-2.webp" alt="Projects" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 8px 32px rgba(26,86,219,0.12)' }} loading="lazy" />
             </div>
@@ -113,7 +113,7 @@ export default function BeyondAcademics() {
       {/* Workshops */}
       <section style={{ background: '#f8fafc', padding: '5rem 0' }} id="workshops">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="row-2" style={{ gap: '3rem', alignItems: 'center' }}>
             <div data-aos="fade-right">
               <span className="section-label">Skill Enhancement</span>
               <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1.25rem' }}>Workshops & Career Seminars</h2>

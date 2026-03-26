@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import PageHeader from '../components/layout/PageHeader';
-import { leadership } from '../data/siteData';
+import PageHeader from '../../components/layout/PageHeader';
+import { leadership } from '../../data/siteData';
 
 export default function Leadership() {
   const [active, setActive] = useState(0);

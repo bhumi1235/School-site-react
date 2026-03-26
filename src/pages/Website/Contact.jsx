@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import PageHeader from '../components/layout/PageHeader';
-import { siteInfo } from '../data/siteData';
+import PageHeader from '../../components/layout/PageHeader';
+import { siteInfo } from '../../data/siteData';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
@@ -40,12 +40,12 @@ export default function Contact() {
           </div>
 
           {/* Enquiry Form */}
-          <div id="enquiry" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem' }}>
+          <div id="enquiry" className="row-2" style={{ gap: '3rem' }}>
             <div data-aos="fade-right">
               <span className="section-label">Send Us a Message</span>
               <h3 className="section-title mt-1" style={{ marginBottom: '1.5rem' }}>Enquiry Form</h3>
               <form className="contact-form" onSubmit={handleSubmit}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="row-2" style={{ gap: '1rem' }}>
                   <div className="form-group">
                     <label>Your Name</label>
                     <input name="name" value={form.name} onChange={handleChange} placeholder="Full name" required />
@@ -55,7 +55,7 @@ export default function Contact() {
                     <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="email@example.com" required />
                   </div>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="row-2" style={{ gap: '1rem' }}>
                   <div className="form-group">
                     <label>Phone Number</label>
                     <input name="phone" value={form.phone} onChange={handleChange} placeholder="+971 ..." />

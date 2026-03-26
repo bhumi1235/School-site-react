@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { stats, programs, facilities, team, testimonials, leadership, siteInfo } from '../data/siteData';
+import { stats, programs, facilities, team, testimonials, leadership, siteInfo } from '../../data/siteData';
 
 /* ── Hero Carousel ── */
 const slides = [
@@ -57,7 +57,7 @@ function Hero() {
 
 /* ── Portal Cards ── */
 const portals = [
-  { icon: 'fa-user-graduate', title: 'Student / Parent Portal', desc: 'Academic Dashboard & Fee Payments', to: '/portal-login?role=student', variant: 'primary' },
+  { icon: 'fa-user-graduate', title: 'Student / Parent Portal', desc: 'Academic Dashboard & Fee Payments', to: '/student/login', variant: 'primary' },
   { icon: 'fa-chalkboard-teacher', title: "Teacher's ERP", desc: 'Attendance, Marks & Lesson Plans', to: '/teacher-portal', variant: 'accent' },
   { icon: 'fa-envelope-open-text', title: 'E-Newsletter', desc: 'Latest Events & Monthly Highlights', to: '/news', variant: 'primary' },
   { icon: 'fa-headset', title: 'Admission Help', desc: '24/7 Helpline for New Admissions', to: '/admissions', variant: 'accent' },
@@ -95,7 +95,7 @@ function AboutSnapshot() {
   return (
     <section style={{ background: '#f8fafc', padding: '5rem 0' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+        <div className="row-2" style={{ gap: '3rem', alignItems: 'center' }}>
           <div data-aos="fade-right" style={{ position: 'relative', minHeight: '400px', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 8px 40px rgba(26,86,219,0.18)' }}>
             <img src="/img/school_science_lab_high_tech.webp" alt="Science lab" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
             <img src="/img/about-2.webp" alt="Campus life" style={{ position: 'absolute', top: 0, left: 0, width: '200px', height: '200px', objectFit: 'cover', background: '#fff', padding: '6px', borderRadius: '0 0 12px 0', boxShadow: '0 8px 24px rgba(0,0,0,0.18)' }} />

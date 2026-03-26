@@ -1,4 +1,4 @@
-import PageHeader from '../components/layout/PageHeader';
+import PageHeader from '../../components/layout/PageHeader';
 
 const newsItems = [
   { tag: 'Achievement', date: 'March 10, 2026', title: 'Global School Wins State Science Olympiad 2026', excerpt: 'Our students swept the podium at the State Science Olympiad, winning gold in Physics, Chemistry and Biology categories.', img: '/img/school_science_lab_high_tech.webp' },

@@ -1,5 +1,5 @@
-import PageHeader from '../components/layout/PageHeader';
-import { team } from '../data/siteData';
+import PageHeader from '../../components/layout/PageHeader';
+import { team } from '../../data/siteData';
 
 const allFaculty = [
   ...team,

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import PageHeader from '../components/layout/PageHeader';
+import PageHeader from '../../components/layout/PageHeader';
 
 const steps = [
   { num: '01', icon: 'fa-file-alt', title: 'Fill Application', desc: 'Complete the online admission form with student and parent details. All fields are mandatory.' },
@@ -52,7 +52,7 @@ export default function Admissions() {
           </div>
           <div className="card-white" style={{ maxWidth: '680px', margin: '0 auto', padding: '2.5rem' }} data-aos="fade-up">
             <form className="contact-form" onSubmit={handleSubmit}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div className="row-2" style={{ gap: '1rem' }}>
                 <div className="form-group"><label>Student Name</label><input name="studentName" value={form.studentName} onChange={handleChange} placeholder="Full name" required /></div>
                 <div className="form-group">
                   <label>Applying for Grade</label>

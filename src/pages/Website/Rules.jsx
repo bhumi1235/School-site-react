@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import PageHeader from '../components/layout/PageHeader';
+import PageHeader from '../../components/layout/PageHeader';
 
 const rulesSections = {
   'school-rules': {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import PageHeader from '../components/layout/PageHeader';
-import { programs } from '../data/siteData';
+import PageHeader from '../../components/layout/PageHeader';
+import { programs } from '../../data/siteData';
 
 const learningMethods = [
   {
@@ -44,14 +44,14 @@ export default function Academics() {
       {/* Curriculum */}
       <section style={{ background: '#fff', padding: '5rem 0' }} id="curriculum">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="row-2" style={{ gap: '3rem', alignItems: 'center' }}>
             <div data-aos="fade-right">
               <span className="section-label">Academic Roadmap</span>
               <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1.25rem' }}>A Holistic & Future-Ready Curriculum</h2>
               <p style={{ color: 'var(--secondary)', marginBottom: '1.5rem' }}>
                 At Global School, our curriculum is engineered to transcend traditional rote learning. We provide a rigorous academic foundation integrated with 21st-century competencies. Our framework is meticulously aligned with global standards, ensuring that every student is prepared for the challenges of higher education and professional life.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
+              <div className="row-2" style={{ gap: '1.25rem' }}>
                 {curriculumSubjects.map(s => (
                   <div key={s.title}>
                     <h5 style={{ marginBottom: '0.4rem', fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -135,7 +135,7 @@ export default function Academics() {
       {/* Assessment */}
       <section style={{ background: '#fff', padding: '5rem 0' }} id="assessment">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="row-2" style={{ gap: '3rem', alignItems: 'center' }}>
             <div data-aos="fade-right" style={{ position: 'relative', display: 'inline-block' }}>
               <img src="/img/about-2.webp" alt="Assessment" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 8px 32px rgba(26,86,219,0.12)' }} loading="lazy" />
               <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 150, height: 150, borderRadius: '50%', background: 'linear-gradient(135deg,var(--primary),var(--primary-dark))', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 32px rgba(26,86,219,0.35)', textAlign: 'center' }}>
@@ -165,14 +165,14 @@ export default function Academics() {
       {/* IT & E-learning */}
       <section style={{ background: '#f1f5f9', padding: '5rem 0' }} id="elearning">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="row-2" style={{ gap: '3rem', alignItems: 'center' }}>
             <div data-aos="fade-right">
               <span className="section-label">Technological Integration</span>
               <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1.25rem' }}>IT, STEM & E-learning Ecosystem</h2>
               <p style={{ color: 'var(--secondary)', marginBottom: '1.5rem' }}>
                 We are a "Digital Discovery" campus where technology is a catalyst, not just a tool. Our students are equipped with the digital literacy required to navigate and lead in a technology-driven world.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div className="row-2" style={{ gap: '1rem' }}>
                 {elearningFeatures.map(f => (
                   <div key={f.label} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.9rem' }}>
                     <i className={`fas ${f.icon}`} style={{ fontSize: '1.5rem', color: 'var(--primary)' }} />
